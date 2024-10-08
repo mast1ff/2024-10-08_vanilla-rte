@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich Text Editor</title>
+  </head>
+  <body>
+    <!-- エディタのルート -->
+    <div data-editor-root class="editor">
+      <!-- エディタのツールバー -->
+      <div class="editor__toolbar" data-editor-target="toolbar">
+        <span>インラインスタイル: </span>
+        <button data-editor-command="bold">Bold</button>
+        <button data-editor-command="italic">Italic</button>
+        <button data-editor-command="underline">Underline</button>
+        <br />
+        <!-- 文章のアラインメント -->
+        <span>アラインメント: </span>
+        <button data-editor-command="justifyLeft">Left</button>
+        <button data-editor-command="justifyCenter">Center</button>
+        <button data-editor-command="justifyRight">Right</button>
+        <br />
+        <!-- ブロック要素 -->
+        <span>ブロック要素: </span>
+        <button data-editor-command="heading1">Heading1</button>
+        <button data-editor-command="heading2">Heading2</button>
+        <button data-editor-command="heading3">Heading3</button>
+        <button data-editor-command="paragraph">Paragraph</button>
+        <br />
+        <!-- リスト -->
+        <span>リスト: </span>
+        <button data-editor-command="insertOrderedList">Ordered List</button>
+        <button data-editor-command="insertUnorderedList">Unordered List</button>
+      </div>
+      <!-- エディタの本文などのコンテンツ -->
+      <div class="editor__content" data-editor-target="editor"></div>
+      <!-- エディタのフッター -->
+      <div class="editor__footer">
+        <button data-editor-command="save">Save</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
